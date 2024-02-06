@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <a href="/realtimeproducts"><button class="btn btn-primary">Real time products</button></a>
+    <h1>Home</h1>
+    <h2>Productos</h2>
+{{#if products.length}}
+
+<table class="table table-striped table-primary">
+    <thead>
+        <tr>
+        <th >#id</th>
+        <th >title</th>
+        <th >description</th>
+        <th >price</th>
+        <th >thumbnail</th>
+        <th >code</th>
+        <th >stock</th>
+        <th >status</th>
+        </tr>
+    </thead>
+    {{#each products}}
+    <tbody>
+        <tr>
+        <th scope="row" >{{id}}</th>
+        <th >{{title}}</th>
+        <th >{{description}}</th>
+        <th >{{price}}</th>
+        <th ><img class="imagen" src="{{thumbnail}}" alt=""></th>
+        <th >{{code}}</th>
+        <th >{{stock}}</th>
+        <th >{{status}}</th>
+        </tr>
+        
+    </tbody>
+{{/each}}
+</table>
+   {{else}}
+
+  <h2>No se encontraron productos</h2>
+{{/if}}
+</div>
+
+
+
